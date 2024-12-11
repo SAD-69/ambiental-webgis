@@ -6,6 +6,45 @@
     <title>WebGIS App</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
     <style>
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centraliza horizontalmente */
+            padding: 10px;
+        }
+
+        .header img {
+        /* float: left; */
+        width: 140px;
+        height: 100px;
+        background: #ffffff;
+        }
+
+        /* .header h1 {
+        position: relative;
+        top: 5px;
+        left: 10px;
+        
+} */
+        .header h2 {
+            font-family: Arial, sans-serif;
+            font-size: 1.5em;
+            margin: 0;
+            text-align: center; /* Garante centralização do texto */
+        }
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza o texto horizontalmente */
+        }
+
+        .header h3 {
+            font-family: Arial, sans-serif;
+            font-style: italic;
+            margin: 0;
+            margin-top: 5px; /* Pequeno espaço entre o h2 e o h3 */
+        }
+
         #map {
             height: 90vh;
             width: 100%;
@@ -14,7 +53,7 @@
             position: absolute;
             top: 10px;
             left: 10px;
-            background: white;
+            background: rgb(0, 0, 0);
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
@@ -23,7 +62,21 @@
     </style>
 </head>
 <body>
-    <h1>Ambiental Pro WebGIS</h1>
+    
+    <div class="header">
+    <h1 id="logo" font="arial">
+        <a href="https://ambientalpro.com.br/">
+            <img src="https://ambientalpro.com.br/wp-content/uploads/2021/03/Ambiental-pro-COLORIDO.png" 
+            alt="logo" 
+
+            > 
+        </a></h1>
+    
+        <div class="header-text">
+            <h2>Ambiental Pro WebGIS</h2>
+            <h3>Projeto Final</h3>
+        </div>
+</div>
     <div id="map"></div>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <script src="/static/main.js"></script>
